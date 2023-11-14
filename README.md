@@ -1,46 +1,91 @@
 # Animal Detection with YOLOv8
 
-This project utilizes YOLOv8 for real-time animal detection. It supports the detection of multiple animal classes, including chickens, cows, goats, pigs, and sheep. The application allows you to choose the specific animal class you want to detect.
+This project uses YOLOv8 for real-time animal detection. It supports multiple animal classes, including chickens, cows, goats, pigs, and sheep. The application allows users to choose the type of animal they want to detect.
 
-## Requirements
+<video width="1280" height="720" controls>
+  <source src="detections/chicken.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+### Prerequisites
+
+Before running the application, make sure you have the following dependencies installed:
 
 - Python 3.x
 - OpenCV
-- Ultralytics
-- Supervision
+- Ultralytics YOLO library
 
-Install the required dependencies using:
-
-```pip install opencv-python ultralytics supervision```
+You can install the required Python packages using the provided `requirements.txt` file:
 
 ## Usage
 
-### Run the main script:
+1. Clone the repository:
 
-- To run from live webcam, run ```python main.py --video_resolution <width of your webcam, height of your webcam>```
-- To run it on a video, run ```python main.py --video_path <path to your video>```
+    ```bash
+    git clone https://github.com/David-Ademola/Animal-Detection.git
+    cd Animal-Detection
+    ```
 
-### Enter the type of animal you want to detect when prompted.
+2. Install dependencies:
 
-## Configuration
+    ```bash
+    ⠀
+    pip install -r requirements.txt
+    ⠀
+    ```
 
-- The YOLOv8 weights file (`best.pt`) is required for the model. Ensure it is available in the project directory.
+3. Run the application:
+
+- To run from a live webcam:
+    ```bash
+    ⠀
+    python main.py --video_resolution (resolution of your webcam)
+    ⠀
+    ```
+- To run on a video:
+  ```bash
+  ⠀
+  python main.py --video_path (path to your video)
+  ⠀
+  ```
+
+Upon running `main.py`, you will be prompted to enter the type of animal you want to detect. Choose from the supported animals, and the application will start real-time detection using YOLOv8.
+
+Press 'Esc' to exit the application.
+
+## Supported Animals
+
+- Chicken
+- Cow
+- Goat
+- Pig
+- Sheep
 
 ## Customization
 
-To extend or customize the project, you can create additional animal classes by inheriting from the `Animal` base class. Each animal class should implement the `main` method, specifying the class index for the desired animal.
+You can customize the application by modifying the `count_and_track.py` file. Adjust the YOLOv8 weights, default zone polygon, and other parameters as needed.
+
+## Contributing
+
+If you'd like to contribute to this project, please follow the standard GitHub flow:
+
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/your-feature-name`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/your-feature-name`
+5. Submit a pull request
+
+## Acknowledgments
+
+- YOLOv8: [Link to YOLOv8 repository](https://github.com/ultralytics/yolov8)
+- Supervision: [Link to Supervision library](https://github.com/roboflow/supervision)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
-
-- YOLOv8: [Link to YOLOv8 repository](https://github.com/ultralytics/yolov8)
-- Supervision: [Link to Supervision library](https://github.com/oughtinc/supervision)
-
 ## Author
 
-[Ademola David]
+- Akinwande David Ademola
 
 Feel free to contribute or report issues!
