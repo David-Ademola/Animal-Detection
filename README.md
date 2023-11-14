@@ -2,7 +2,7 @@
 
 This project uses YOLOv8 for real-time animal detection. It supports multiple animal classes, including chickens, cows, goats, pigs, and sheep. The application allows users to choose the type of animal they want to detect.
 
-![cow](https://github.com/David-Ademola/Animal-Detection/detections/cow.jpg)
+![cow](https://github.com/David-Ademola/Animal-Detection/assets/cow.jpg)
 
 ### Prerequisites
 
